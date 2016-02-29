@@ -1,6 +1,8 @@
 ---
 title: " Reproductible Research Assignment 1"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 
@@ -20,6 +22,7 @@ Also, set all code echo = TRUE
 
 ```{r loadData}
 
+unzip("activity.zip", exdir = ".")
 activityData <- read.csv("activity.csv", colClasses = c("integer", "Date", "integer"))
 
 ```
@@ -199,4 +202,5 @@ ggplot(intervalStepsFilled, aes(interval, steps, color = weekday)) +
   labs(y = "Steps per Interval")
 
 ```
-
+Fin
+test
